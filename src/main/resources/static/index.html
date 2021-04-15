@@ -56,46 +56,45 @@
                             <div class="col-md-4 pt-3">
                                 <div class="form-group">
                                     <label for="antall"></label>
-                                    <input type="number" style="color: black"  placeholder="Antall" id="antall" required/><br/>
+                                    <input type="number" style="color: black"  placeholder="Antall" id="antall" required onchange="validerAntall(this.value)"/><br/>
                                 </div>
                             </div>
-                            <span id="feilAntall" class="col-md-2"></span>
+                            <span id="feilAntall" class="col-md-2" style="color: red"></span>
                         </div>
 
                         <div class="row" >
-                            <span id="feilFornavn" class="col-md-2"></span>
-
+                            <span id="feilFornavn" class="col-md-2" style="color: red"></span>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="navn">Fornavn</label>
-                                    <input type="text" class="form-control" placeholder="Skriv inn navn" id="navn" required /><br/>
+                                    <input type="text" class="form-control" placeholder="Skriv inn navn" id="navn" required onchange="validerNavn(this.value)" /><br/>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="etternavn">Etternavn</label>
-                                    <input type="text" class="form-control" placeholder="Skriv inn Etternavn" id="etternavn" required/><br/>
+                                    <input type="text" class="form-control" placeholder="Skriv inn Etternavn" id="etternavn" required onchange="validerEtterNavn(this.value)"/><br/>
                                 </div>
                             </div>
-                            <span id="feilEtternavn" class="col-md-2"></span>
+                            <span id="feilEtternavn" class="col-md-2" style="color: red"></span>
 
                         </div>
                         <div class="row" >
-                            <span id="feilEpost" class="col-md-2"></span>
+                            <span id="feilEpost" class="col-md-2" style="color: red"></span>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="epost">Epost</label>
-                                    <input type="text" class="form-control" placeholder="Skriv inn Epost " id="epost" required/><br/>
+                                    <input type="text" class="form-control" placeholder="Skriv inn Epost " id="epost" required onchange="validerEpost(this.value)"/><br/>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="telefonnr">Telefon</label>
-                                    <input type="text"  class="form-control" placeholder=" Skriv inn telefon" id="telefonnr" required/><br/>
+                                    <input type="text"  class="form-control" placeholder=" Skriv inn telefon" id="telefonnr" required onchange="validerTlf(this.value)"/><br/>
 
                                 </div>
                             </div>
-                            <span id="feilTelefonnr" class="col-md-2"></span>
+                            <span id="feilTelefonnr" class="col-md-2" style="color: red"></span>
 
                         </div>
 

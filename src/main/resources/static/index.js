@@ -16,32 +16,48 @@ function validerOglagreBestilling(){
 
  */
 
-function bestilling(){
+function bestilling() {
+
+    if ($("#navn").val().length < 1) {
+        $("#error").html("" +
+            "")
 
 
-    const kunde = {
-        navn: $("#navn").val(),
-        etternavn: $("#etternavn").val(),
-        telefonnr: $("#telefonnr").val(),
-        epost: $("#epost").val(),
-        film: $("#film").val(),
-        antall: $("#antall").val()
+    } else if ($("#etternavn").val().length < 1) {
+        $("#error2").html("")
+    } else if ($("#epost").val().length < 1) {
+        $("#error4").html("")
+    } else if ($("#telefonnr").val().length < 1) {
+        $("#error3").html("")
+    } else if ($("#antall").val().length < 1) {
+        $("#error1").html("")
+    } else if ($("#film").val() == "" || $("#film").val() == "Velg Film") {
+        $("#error5").html("Navn må fylles inn")
+    } else {
 
-    };
-    $.post("/lagre", kunde,function () {
-        hentAlle()
-    });
+        const kunde = {
+            navn: $("#navn").val(),
+            etternavn: $("#etternavn").val(),
+            telefonnr: $("#telefonnr").val(),
+            epost: $("#epost").val(),
+            film: $("#film").val(),
+            antall: $("#antall").val()
+
+        };
+        $.post("/lagre", kunde, function () {
+            hentAlle()
+        });
 
 
-    // slette input
-    $("#film").val("");
-    $("#etternavn").val("");
-    $("#telefonnr").val("");
-    $("#navn").val("");
-    $("#epost").val("");
-    $("#antall").val("");
+        // slette input
+        $("#film").val("");
+        $("#etternavn").val("");
+        $("#telefonnr").val("");
+        $("#navn").val("");
+        $("#epost").val("");
+        $("#antall").val("");
+    }
 }
-
     function hentAlle(){
         $.get("/hentAlle", function (billetter){
             formaterData(billetter)

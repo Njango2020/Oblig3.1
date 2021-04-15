@@ -1,4 +1,4 @@
-
+/*
 function validerNavn(navn){
     const regexp = /^[a-zA-ZæøåÆØÅ. \-]{2,20};
     const ok = regexp.test(navn);
@@ -62,3 +62,5 @@ function validerAntall(antall){
         return true;
     }
 }
+
+ */

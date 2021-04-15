@@ -17,7 +17,7 @@ public class KundeRepository {
         db.update(sql,kunde.getNavn(),kunde.getEtternavn(),kunde.getEpost(),kunde.getTelefonnr(),kunde.getAntall(),kunde.getFilm());
     }
     public List<Kunde> hentAlleBilletter(){
-        String sql = "SELECT * FROM Kunde";
+        String sql = "SELECT * FROM Kunde ORDER BY etternavn ASC ";
         List<Kunde> allekunder= db.query(sql, new BeanPropertyRowMapper<>(Kunde.class));
         return allekunder;
     }
