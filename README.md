@@ -9,6 +9,7 @@ GitHub repo URL:
     https://github.com/DATA1700/oblig-3-JohanSereba
 
 URL til Heroku app:
+    https://oblig-3-sereba.herokuapp.com/
 
 Fullt navn:
     Johan Sereba
